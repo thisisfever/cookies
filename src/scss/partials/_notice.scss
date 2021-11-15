@@ -1,0 +1,49 @@
+.fvr-cookie-notice {
+    text-align: left;
+    position: fixed;
+    bottom: 30px;
+    right: 50%;
+    max-width: 500px;
+    font-family: inherit;
+    transform: translate(50%, 150%);
+    z-index: 999998;
+    background: #fff;
+    padding: 50px;
+    box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.35);
+    border-radius: $radius;
+    box-sizing: border-box;
+}
+
+.fvr-cn-active {
+    transform: translate(50%, 0);
+    animation: fvr-settings 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    opacity: 1;
+}
+
+.fvr-cn-title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.fvr-cn-body {
+    margin: 0 0 30px 0;
+    line-height: 1.5;
+    font-size: 16px;
+
+    a {
+        text-decoration: underline;
+        color: inherit;
+
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+
+.fvr-cn-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

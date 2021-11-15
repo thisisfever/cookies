@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Notice</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/dist/fever-cookies.min.css" />
+	<!-- <script src="/dist/fever-cookies.min.js"></script> -->
+	<script src="/dist/test.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            height: 2000px;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            window.FeverCookies({
+                settings_toggle: '.cookie-button',
+                policy: {
+                    link: '/cookies-policy/',
+                    name: 'Cookies Policy',
+                },
+                optional_cookies: {
+                    analytics: {
+                        cookies: ['_ga', '_gid', '_gat', '_gat_gtag_UA_XXXXXXXX_X'],
+                        onAccept: function() {
+                            // Google Tag Manager Example - Remove unless needed
+                            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                            })(window,document,'script','dataLayer','GTM-XXXXXXX');
+    
+                            // Google Analytics Example - Remove unless needed
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'UA-XXXXXXXX-X', { 'anonymize_ip': true });
+                        },
+                        onRevoke: function() {
+                            // Disable Google Analytics
+                            window['ga-disable-UA-XXXXXXXX-X'] = true;
+                        }
+                    },
+                    marketing: {
+                        cookies: ['_fbp', 'fr'], // Facebook Pixel Cookies - Remove unless needed
+                        onAccept: function() {
+                            // Facebook Pixel Example - Remove unless needed
+                            !function(f,b,e,v,n,t,s)
+                            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                            n.queue=[];t=b.createElement(e);t.async=!0;
+                            t.src=v;s=b.getElementsByTagName(e)[0];
+                            s.parentNode.insertBefore(t,s)}(window, document,'script',
+                            'https://connect.facebook.net/en_US/fbevents.js');
+                            fbq('init', 'FACEBOOK_PIXEL_TRACKING_ID');
+                            fbq('track', 'PageView');
+                        },
+                        onRevoke: function() {
+                            // Facebook Pixel Example - Remove unless needed
+                            fbq('consent', 'revoke');
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Fever Cookies Example</h1>
+    <button class="cookie-button" tabindex="0">Cookie Settings</button>
+</body>
+</html>

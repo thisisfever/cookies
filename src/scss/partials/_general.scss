@@ -1,0 +1,27 @@
+$radius: 4px;
+
+@keyframes fvr-settings {
+    0% { transform: translate(50%, 150%); }
+    100% { transform: translate(50%, 0); }
+}
+
+.fvr-sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+.fvr-cs-modal a:focus-visible,
+.fvr-cookie-notice a:focus-visible,
+button.fvr-cookies-btn:focus-visible
+{
+    outline: #000 solid 3px !important;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@thisisfever/cookies",
+  "version": "1.0.0",
+  "description": "A simple, lightweight cookie consent system.",
+  "main": "dist/fever-cookies.min.js",
+  "dependencies": {},
+  "devDependencies": {
+    "laravel-mix": "^6.0.34",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.43.2",
+    "sass-loader": "^12.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thisisfever/cookies.git"
+  },
+  "author": "This is Fever",
+  "license": "ISC"
+}

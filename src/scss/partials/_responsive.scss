@@ -1,0 +1,43 @@
+@media (max-width: 800px) {
+
+    .fvr-cookie-notice {
+        width: 100%;
+        bottom: 0;
+        padding: 36px;
+        text-align: center;
+        border-radius: 0;
+        box-shadow: 0px 0px 15px 0px rgba(#000, 0.4);
+    }
+
+    .fvr-cn-actions {
+        display: block;
+
+        :first-child {
+            margin-bottom: 30px;
+        }
+
+        .fvr-cookies-btn {
+            width: 100%;
+        } 
+    }
+
+    .fvr-cn-active {
+        animation: fvr-settings 0.6s ease;
+    }
+
+    .fvr-cn-body {
+        margin-bottom: 30px;
+    }
+
+    .fvr-cn-body,
+    .fvr-cookies-btn-primary, 
+    .fvr-cookies-btn-secondary {
+        font-size: 14px !important;
+    }
+
+    .fvr-cs-modal {
+        border-radius: 0;
+        width: 100%;
+    }
+
+}
