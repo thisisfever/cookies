@@ -22,8 +22,7 @@ To start using Fever Cookies right away, you can use the CDN to serve the files 
 Simply add the CSS & JS in your `<head>`:
 
 ```html
-<link rel="stylesheet" type="text/css" media="screen" href="//cdn.jsdelivr.net/npm/@thisisfever/cookies@1/dist/fever-cookies.min.css
-" />
+<link rel="stylesheet" type="text/css" media="screen" href="//cdn.jsdelivr.net/npm/@thisisfever/cookies@1/dist/fever-cookies.min.css" />
 <script src="//cdn.jsdelivr.net/npm/@thisisfever/cookies@1/dist/fever-cookies.min.js" defer></script>
 ```
 ### NPM Package
