@@ -74,7 +74,9 @@ window.saveSettings = function(acceptAll = false) {
     // Load or block cookie scripts
     enableScriptsByCat();
 
-    window.toggleSettings();
+    if(!acceptAll) {
+        window.toggleSettings();
+    }
 }
 
 window.toggleSettings = function() {
