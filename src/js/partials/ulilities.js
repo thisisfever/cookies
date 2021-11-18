@@ -21,28 +21,16 @@ function getCookie(name) {
     }
     return null;
 }
-function clearAllCookiePaths(cookieBase) {
-    let p = window.location.pathname.split('/');
-    window.document.cookie = cookieBase + '; path=/';
-    while (p.length > 0) {
-          window.document.cookie = cookieBase + '; path=' + p.join('/');
-          p.pop();
-    };
-}
+
 function deleteCookies(category) {
     let cookies = window.options.optional_cookies[category].cookies;
     console.log('Deleting '+category+' cookies', cookies);
     // console.log(window.options.optional_cookies[category].cookies);
     for (let c = 0; c < cookies.length; c++) {
         let encodedCookieName = cookies[c];
-        // This method ensures all instances of the cookie are removed.
-        let cookieBase = encodedCookieName + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT';
-        clearAllCookiePaths(cookieBase);
-    
-        let d = window.location.hostname.split('.');
-        while (d.length > 0) {
-            clearAllCookiePaths(cookieBase + '; domain=' + d.join('.'));
-            d.shift();
+
+        if(getCookie(encodedCookieName) != null) {
+            document.cookie = encodedCookieName + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT path=/; domain=' + window.location.hostname;
         }
     }
 }
