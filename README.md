@@ -1,17 +1,17 @@
 <div align="center">
 
-<a href="https://www.thisisfever.co.uk/" style="margin: 0">
+<a href="https://www.thisisfever.co.uk/">
     <img alt="This is Fever" src="https://www.thisisfever.co.uk/assets/img/general/logo.svg" height="24">
 </a>
 
-<h1 style="margin-top: 10px">Fever Cookies</h1>
+<h1>Fever Cookies</h1>
 <p>A simple, lightweight cookie consent system.</p>
 </div>
 
 ## Features 
 
-- Only run cookies if user accepts
-- Allows preference to be changed at any time via settings
+- Only loads cookies after the user gives consent
+- Allows user preferences to be changed at any time via settings
 - Splits cookies into categories
 
 ## Getting Started
@@ -28,20 +28,25 @@ Simply add the CSS & JS in your `<head>`:
 ### NPM Package
 > Note: If you intend to use Fever Cookies with the CDN, you can skip this
 
-1. Install package via Terminal
+1. Install package via the following command:
     ```shell
     $ npm install @thisisfever/cookies
     ```
-2. Import to your JS file
+2. Import core script to your JS using:
    ```js
-   import '~@thisisfever/cookies/src/fever-cookies';
+   import '@thisisfever/cookies/src/fever-cookies';
    ```
+3. Import core styling to your SCSS using:
+   ```scss
+   import "~@thisisfever/cookies/src/fever-cookies";
+   ```
+
 
 ## Usage 
 
 First you need to initilise Fever Cookies.
 
-1. Add the following in your `<head>`, below the CSS & JS.
+1. Add the following in your `<head>`, below the CSS & JS:
 
    ```html
    <script>
@@ -153,7 +158,7 @@ First you need to initilise Fever Cookies.
 
 ## Examples
 
-See below for a full example.
+See below for a full example:
 
 ```html
 <!-- Google Analytics Example - Remove unless needed -->
